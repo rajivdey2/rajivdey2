@@ -9,10 +9,10 @@
 🍀#Enthusiastic learner <br/>
 🍁Currently learning about data analytics at [Freecodecamp](link)<br/> -->
 
-<! GitHub stats from https://github.com/anuraghazra/github-readme-stats -->
-<!-![ Rajiv's GitHub stats](https://github-readme-stats.vercel.app/api?username=rajivdey2&show_icons=true&theme=transparent)
+<GitHub stats from https://github.com/anuraghazra/github-readme-stats -->
+<[ Rajiv's GitHub stats](https://github-readme-stats.vercel.app/api?username=rajivdey2&show_icons=true&theme=transparent)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rajivdey2&hide_progress=true)
+[Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rajivdey2&hide_progress=true)
 
 
 #🤖💻 Tech stack
