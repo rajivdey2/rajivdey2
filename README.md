@@ -1,6 +1,6 @@
 <!--Level 1: Simple bio and stats -->
   
-<!--### 👋 Hi, I'm Rajiv!
+-### 👋 Hi, I'm Rajiv!
 
 🙋‍♂️Software Engineer sharing about my journey and learnings in tech<br/> 
 👨‍🎓Studying [Computer-Science](link)</br> 
@@ -9,8 +9,8 @@
 🍀#Enthusiastic learner <br/>
 🍁Currently learning about data analytics at [Freecodecamp](link)<br/> -->
 
-<!-- GitHub stats from https://github.com/anuraghazra/github-readme-stats -->
-<!--![ Rajiv's GitHub stats](https://github-readme-stats.vercel.app/api?username=rajivdey2&show_icons=true&theme=transparent)
+<! GitHub stats from https://github.com/anuraghazra/github-readme-stats -->
+<!-![ Rajiv's GitHub stats](https://github-readme-stats.vercel.app/api?username=rajivdey2&show_icons=true&theme=transparent)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rajivdey2&hide_progress=true)
 
@@ -32,7 +32,7 @@ Tech Stack
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)<br/> 
 ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
-![ Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) -->
+![ Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) 
  
 
 
