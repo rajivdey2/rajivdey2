@@ -1,33 +1,57 @@
-Experiment - 8
+from google.colab import files
 
-Decision Tree Classification
+uploaded = files.upload()
 
-Create a target variable such as Performance using the average of Mathematics, Physics, and Chemistry marks.
-Suggested classification:
-Low: Average marks below 50
-Medium: Average marks from 50 to below 75
-High: Average marks 75 and above
-Build a Decision Tree Classification model to predict student performance using StudyHours as the input feature. Analyse how study hours influence academic performance.
 
-Build a Decision Tree model using math, Physics, Chemistry, StudyHours, and Attendance to classify students' academic performance.
 
-Divide the student_scores dataset into 80% training data and 20% testing data. Train a Decision Tree Classifier and evaluate its performance using accuracy, precision, recall, and F1-score.
-Generate a confusion matrix for the Decision Tree Classification model. Analyse the correctly and incorrectly classified students in Low, Medium, and High performance categories.
 
-Develop a Decision Tree Classifier using the student_scores dataset. Predict the performance category of a new student with the following details: 	
-Mathematics
-     85
 
-Physics             
-      78
+import pandas as pd
 
-Chemistry
-      90
+df = pd.read_csv('marks.csv')
 
-Study Hours
-        6
+# Display first 5 rows
+df.head()
 
-Attendance
-       92
 
-Predict whether the student belongs to the Low, Medium, or High performance category.
+
+
+df['Average'] = df[['Mathematics', 'Physics', 'Chemistry']].mean(axis=1)
+
+df.head()
+
+
+
+
+def classify_performance(avg):
+    if avg < 50:
+        return 'Low'
+    elif avg < 75:
+        return 'Medium'
+    else:
+        return 'High'
+
+df['Performance'] = df['Average'].apply(classify_performance)
+
+
+
+
+
+
+df.head(10)
+
+
+
+
+
+
+print(df['Performance'].value_counts())
+
+
+
+
+
+
+df.to_csv('student_performance_output.csv', index=False)
+
+files.download('student_performance_output.csv')
