@@ -1,0 +1,33 @@
+Experiment - 8
+
+Decision Tree Classification
+
+Create a target variable such as Performance using the average of Mathematics, Physics, and Chemistry marks.
+Suggested classification:
+Low: Average marks below 50
+Medium: Average marks from 50 to below 75
+High: Average marks 75 and above
+Build a Decision Tree Classification model to predict student performance using StudyHours as the input feature. Analyse how study hours influence academic performance.
+
+Build a Decision Tree model using math, Physics, Chemistry, StudyHours, and Attendance to classify students' academic performance.
+
+Divide the student_scores dataset into 80% training data and 20% testing data. Train a Decision Tree Classifier and evaluate its performance using accuracy, precision, recall, and F1-score.
+Generate a confusion matrix for the Decision Tree Classification model. Analyse the correctly and incorrectly classified students in Low, Medium, and High performance categories.
+
+Develop a Decision Tree Classifier using the student_scores dataset. Predict the performance category of a new student with the following details: 	
+Mathematics
+     85
+
+Physics             
+      78
+
+Chemistry
+      90
+
+Study Hours
+        6
+
+Attendance
+       92
+
+Predict whether the student belongs to the Low, Medium, or High performance category.
