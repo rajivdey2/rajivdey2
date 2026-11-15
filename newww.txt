@@ -1,57 +1,35 @@
-from google.colab import files
+set ns [new Simulator]
+set nf [open hello.nam w]
+$ns namtrace-all $nf
+set nt [open hello.tr w]
+$ns trace-all $nt
 
-uploaded = files.upload()
+proc finish {} {
+    global ns nf
+    $ns flush-trace
+    close $nf
+    exec nam hello.nam &
+    exit 0
+}
 
+set n0 [$ns node]
+set n1 [$ns node]
+$ns duplex-link $n0 $n1 10Mb 10ms DropTail
+$ns duplex-link-op $n0 $n1 orient right
 
+set udp0 [new Agent/UDP]
+$ns attach-agent $n0 $udp0
+set cbr0 [new Application/Traffic/CBR]
+$cbr0 set packetSize_ 500
+$cbr0 set interval_ 0.01
+$cbr0 set random_ 1
+$cbr0 attach-agent $udp0
 
+set null0 [new Agent/Null]
+$ns attach-agent $n1 $null0
+$ns connect $udp0 $null0
 
-
-import pandas as pd
-
-df = pd.read_csv('marks.csv')
-
-# Display first 5 rows
-df.head()
-
-
-
-
-df['Average'] = df[['Mathematics', 'Physics', 'Chemistry']].mean(axis=1)
-
-df.head()
-
-
-
-
-def classify_performance(avg):
-    if avg < 50:
-        return 'Low'
-    elif avg < 75:
-        return 'Medium'
-    else:
-        return 'High'
-
-df['Performance'] = df['Average'].apply(classify_performance)
-
-
-
-
-
-
-df.head(10)
-
-
-
-
-
-
-print(df['Performance'].value_counts())
-
-
-
-
-
-
-df.to_csv('student_performance_output.csv', index=False)
-
-files.download('student_performance_output.csv')
+$ns at 0.3 "$cbr0 start"
+$ns at 1.0 "$cbr0 stop"
+$ns at 3.0 "finish"
+$ns run
